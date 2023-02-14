@@ -15,11 +15,52 @@
 <title>Omikuji Form</title>
 </head>
 <body>
-	<div class="container">
-		<h1>Welcome, User!</h1>
-		<a href="/counter">View your counter</a>
-		<a href="/by_two">Increment by two</a> <br />
-		<a href="/reset">Reset counter</a>
+	<div class="container mt-5">
+		<h1>Send an Omikuji!</h1>
+		<div class="card mt-5">
+			<div class="card-body">
+				<form action="/send" method="post">
+					<div class="form-group mt-3">
+						<label for="num">Pick any number from 5 to 25:</label> <input
+							type="number" id="num" name="num" min="5" max="25"
+							class="form-control mt-1" placeholder="5">
+					</div>
+					<div class="form-group mt-3">
+						<label for="city">Enter the name of any city:</label> <input
+							type="text" id="city" name="city" class="form-control mt-1"
+							placeholder="Name of city">
+					</div>
+					<div class="form-group mt-3">
+						<label for="name">Enter the name of any real person:</label> <input
+							type="text" id="name" name="name" class="form-control mt-1"
+							placeholder="Name of person">
+					</div>
+					<div class="form-group mt-3">
+						<label for="hobby">Enter professional endeavor or hobby:</label> <input
+							type="text" id="hobby" name="hobby" class="form-control mt-1"
+							placeholder="Name of hobby">
+					</div>
+					<div class="form-group mt-3">
+						<label for="livingThing">Enter any type of living thing:</label> <input
+							type="text" id="livingThing" name="livingThing"
+							class="form-control mt-1" placeholder="Name of living thing">
+					</div>
+					<div class="form-group mt-3">
+						<label for="message">Say something nice to someone:</label>
+						<textarea id="message" name="message" class="form-control mt-1"
+							rows="3" placeholder="Enter your message here"
+							style="resize: none;"></textarea>
+
+					</div>
+					<p class="mt-2">
+						<i>Send and show a friend</i>
+					</p>
+					<div class="container d-flex justify-content-end">
+						<button type="submit" class="btn btn-success mt-1">Send</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
