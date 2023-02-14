@@ -33,10 +33,10 @@ public class MainController {
 		session.setAttribute("livingThing", livingThing);
 		session.setAttribute("message", message);
 		
-		return "redirect:/show";
+		return "redirect:/omikuji/show";
 	}
 
-	@GetMapping("/show")
+	@GetMapping("omikuji/show")
 	public String results(HttpSession session, Model model) {
 		model.addAttribute("num", session.getAttribute("num"));
 		model.addAttribute("city", session.getAttribute("city"));
